@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:ui';
 
 import 'package:alice/model/alice_log.dart';
 import 'package:flutter/foundation.dart';
@@ -53,7 +52,7 @@ class AliceLogEntryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
+    final textTheme = Theme.of(context).textTheme.titleLarge;
 
     final rawTimestamp = log.timestamp.toString();
     final timeStartIndex = rawTimestamp.indexOf(' ') + 1;
@@ -65,7 +64,7 @@ class AliceLogEntryWidget extends StatelessWidget {
         children: [
           TextSpan(
             text: formattedTimestamp,
-            style: textTheme.caption!.copyWith(
+            style: textTheme?.copyWith(
               color: color.withOpacity(0.6),
               fontFeatures: [FontFeature.tabularFigures()],
             ),
@@ -139,7 +138,7 @@ class AliceLogEntryWidget extends StatelessWidget {
       case DiagnosticLevel.summary:
         return Colors.black;
       case DiagnosticLevel.error:
-        return theme.errorColor;
+        return theme.colorScheme.error;
       case DiagnosticLevel.off:
         return Colors.purple;
     }
