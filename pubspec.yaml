@@ -19,11 +19,11 @@ dependencies:
 
   path_provider: ^2.1.5
   permission_handler: ^12.0.1
-  package_info_plus: ^10.0.0
+  package_info_plus: ^9.0.0
 #  open_filex: ^4.6.0
   open_file: ^3.5.11
   sensors_plus: ^7.0.0
-  share_plus: ^13.0.0
+  share_plus: ^12.0.0
   chopper: ^7.4.0
   collection: ^1.19.1
   url_launcher: ^6.3.2
